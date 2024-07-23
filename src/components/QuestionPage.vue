@@ -1,24 +1,19 @@
 <template>
-  <div class="max-w-lg mx-auto p-8 bg-white rounded-lg shadow-lg mt-10 relative">
-    <div class="flex items-center mb-10">
+  <div class="max-w-lg mx-auto p-8 bg-white rounded-lg shadow-lg mt-10">
+    <div v-if="currentQuestionIndex > 0" class="mb-10">
       <font-awesome-icon
-          v-if="!isFirstQuestion"
           icon="angle-left"
           class="text-4xl cursor-pointer text-gray-400 hover:text-gray-700 transition-transform duration-300 transform hover:scale-150 mr-4"
           @click="goBack"
       />
-      <h2 class="text-2xl font-bold flex-grow text-left animated-title">{{ currentQuestion.question }}</h2>
     </div>
+    <h2 class="text-2xl font-bold mb-6 text-left">{{ currentQuestion.question }}</h2>
     <p class="text-gray-600 mb-6">Markieren Sie die richtigen Antworten</p>
     <img v-if="currentQuestion.questionImage" :src="currentQuestion.questionImage" alt="Question Image" class="mb-6 rounded-lg shadow-md" />
     <div v-for="(option, index) in currentQuestion.options" :key="index" class="mb-4">
       <label
-          class="flex items-center justify-between p-4 border rounded-lg cursor-pointer transition-transform transform hover:scale-105 shadow-sm"
-          :class="{
-            'bg-green-500 text-white': selectedAnswers.includes(option.text),
-            'border-green-500': selectedAnswers.includes(option.text),
-            'hover:bg-gray-50': !selectedAnswers.includes(option.text)
-          }"
+          class="flex items-center justify-between p-4 border rounded-lg cursor-pointer transition transform hover:scale-105"
+          :class="{ 'bg-green-500 text-white': selectedAnswers.includes(option.text), 'border-green-500': selectedAnswers.includes(option.text) }"
       >
         <div class="flex items-center">
           <input type="checkbox" :value="option.text" v-model="selectedAnswers" class="hidden" />
@@ -33,7 +28,7 @@
         </div>
       </div>
     </div>
-    <button :disabled="selectedAnswers.length === 0" @click="checkAnswer" class="w-full bg-black text-white p-3 rounded-lg mt-6 disabled:bg-gray-300 hover:bg-gray-800 transition duration-300 transform hover:scale-105">
+    <button :disabled="selectedAnswers.length === 0" @click="checkAnswer" class="w-full bg-black text-white p-3 rounded-lg mt-6 disabled:bg-gray-300 hover:bg-gray-800">
       Next
     </button>
   </div>
@@ -50,8 +45,8 @@ export default {
     const router = useRouter();
     const currentQuestion = computed(() => quizStore.questions[quizStore.currentQuestionIndex]);
     const selectedAnswers = ref<string[]>([]);
+    const currentQuestionIndex = computed(() => quizStore.currentQuestionIndex);
     const visibleImages = ref<number[]>([]);
-    const isFirstQuestion = computed(() => quizStore.currentQuestionIndex === 0);
 
     const toggleImage = (index: number) => {
       if (visibleImages.value.includes(index)) {
@@ -71,8 +66,10 @@ export default {
     };
 
     const goBack = () => {
-      if (!isFirstQuestion.value) {
+      if (quizStore.currentQuestionIndex > 0) {
         quizStore.previousQuestion();
+        router.push('/question');
+      } else {
         router.push('/');
       }
     };
@@ -83,24 +80,7 @@ export default {
       }
     });
 
-    return { currentQuestion, selectedAnswers, checkAnswer, toggleImage, isImageVisible, goBack, isFirstQuestion };
+    return { currentQuestion, selectedAnswers, checkAnswer, toggleImage, isImageVisible, currentQuestionIndex, goBack };
   },
 };
 </script>
-
-<style>
-.animated-title {
-  animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-</style>

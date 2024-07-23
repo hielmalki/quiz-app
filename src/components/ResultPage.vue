@@ -1,12 +1,12 @@
 <template>
-  <div class="max-w-lg mx-auto p-8 bg-white rounded-lg shadow-lg mt-10 relative">
+  <div class="max-w-lg mx-auto p-8 bg-white rounded-lg shadow-lg mt-10">
     <div class="flex items-center mb-10">
       <font-awesome-icon
           icon="angle-left"
           class="text-4xl cursor-pointer text-gray-400 hover:text-gray-700 transition-transform duration-300 transform hover:scale-150 mr-4"
           @click="goBack"
       />
-      <h2 class="text-2xl font-bold flex-grow text-center animated-title">Ergebnis</h2>
+      <h2 :class="['text-2xl', 'font-bold', 'flex-grow', 'text-center', 'mr-8', isCorrect(userAnswer) ? 'text-green-500 animate-bounce' : 'text-red-500 animate-bounce']">{{ isCorrect(userAnswer) ? 'Richtig!' : 'Falsch!' }}</h2>
     </div>
     <div v-if="userAnswer">
       <img v-if="getQuestionImage(userAnswer.question)" :src="getQuestionImage(userAnswer.question)" alt="Question Image" class="mb-6 rounded-lg shadow-md" />
@@ -30,14 +30,14 @@
         </div>
       </div>
       <hr class="my-6">
-      <p class="mt-6 text-base" :class="{ 'text-green-500': isCorrect(userAnswer), 'text-red-500': !isCorrect(userAnswer) }">
+      <p class="mt-4 text-base">
         <span class="font-semibold">Deine Antwort:</span> {{ userAnswer.answer }}
       </p>
       <p class="mt-4 text-base">
         <span class="font-semibold">Richtige Antwort:</span> {{ getCorrectAnswer(userAnswer.question).join(', ') }}
       </p>
     </div>
-    <button :disabled="!hasNextQuestion" @click="goToNextQuestion" class="w-full bg-black text-white p-3 rounded-lg mt-4 disabled:bg-gray-300 hover:bg-gray-800 transition duration-300 transform hover:scale-105">
+    <button :disabled="!hasNextQuestion" @click="goToNextQuestion" class="w-full bg-black text-white p-3 rounded-lg mt-4 disabled:bg-gray-300 hover:bg-gray-800">
       Next
     </button>
   </div>
@@ -89,12 +89,19 @@ export default {
     };
 
     const goBack = () => {
-      router.push('/');
+      if (quizStore.currentQuestionIndex > 0) {
+        quizStore.previousQuestion();
+        router.push('/question');
+      } else {
+        router.push('/');
+      }
     };
 
     const goToNextQuestion = () => {
       if (hasNextQuestion.value) {
         quizStore.nextQuestion();
+        router.push('/question');
+      } else {
         router.push('/');
       }
     };
@@ -103,20 +110,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.animated-title {
-  animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-</style>

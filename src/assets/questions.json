@@ -1,6 +1,6 @@
 [
   {
-    "question": "Welche der Antworten sind Aufgaben des Prozessschritts \"Abschluss\" im\nFundamentalen Testprozess nach ISTQB?",
+    "question": "Welche der Antworten sind Aufgaben des Prozessschritts \"Abschluss\" im Fundamentalen Testprozess nach ISTQB?",
     "questionImage": "",
     "options": [
       { "text": "Durchführung \"Lessons learned\"", "image": "" },
@@ -11,25 +11,25 @@
     "correctAnswer": ["Durchführung \"Lessons learned\"", "Archivierung der Testmittel", "Entwerfen der konkreten Testfälle"]
   },
   {
-    "question": "What is the capital of France?",
+    "question": "Welcher der nachfolgenden Punkte ist ein Projektrisiko?",
     "questionImage": "",
     "options": [
-      { "text": "Berlin", "image": "" },
-      { "text": "Madrid", "image": "" },
-      { "text": "Paris", "image": "" },
-      { "text": "Lisbon", "image": "" }
+      { "text": "Mangelhafte Benutzbarkeit der Anwendung über die GUI", "image": "" },
+      { "text": "Schlechte Softwarecharakteristiken (z. B. Perfomance)", "image": "" },
+      { "text": "Fehler in der Testumgebung", "image": "" },
+      { "text": "Möglichkeit von Schäden an Leib und Leben durch funktionale Softwarefehler", "image": "" }
     ],
-    "correctAnswer": ["Paris"]
+    "correctAnswer": ["Möglichkeit von Schäden an Leib und Leben durch funktionale Softwarefehler", "Fehler in der Testumgebung", "Schlechte Softwarecharakteristiken (z. B. Perfomance)"]
   },
   {
-    "question": "Which planet is known as the Red Planet?",
+    "question": "Welches der folgenden Beispiele ist eine Fehlerwirkung in einem Tempomat eines Autos?",
     "questionImage": "",
     "options": [
-      { "text": "Earth", "image": "" },
-      { "text": "Mars", "image": "/src/assets/images/img1.jpg" },
-      { "text": "Jupiter", "image": "" },
-      { "text": "Saturn", "image": "" }
+      { "text": "Die System-Entwurfspezifikation gibt die Geschwindigkeit falsch an", "image": "" },
+      { "text": "Nicht benötigter Code, der beim Rückwärtsfahren einen Alarm auslöst, wurde in das System aufgenommen", "image": "" },
+      { "text": "Der Entwickler des Systems hat vergessen, Variablen nach einem, Ausschneiden und Einfügen umzubenennen", "image": "" },
+      { "text": "Das System hält die eingestellte Geschwindigkeit nicht mehr ein, wenn die Radiolautstärke erhöht oder verringert wird", "image": "" }
     ],
-    "correctAnswer": ["Mars"]
+    "correctAnswer": ["Die System-Entwurfspezifikation gibt die Geschwindigkeit falsch an", "Das System hält die eingestellte Geschwindigkeit nicht mehr ein, wenn die Radiolautstärke erhöht oder verringert wird"]
   }
 ]
