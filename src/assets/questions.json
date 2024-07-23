@@ -1,0 +1,35 @@
+[
+  {
+    "question": "Welche der Antworten sind Aufgaben des Prozessschritts \"Abschluss\" im\nFundamentalen Testprozess nach ISTQB?",
+    "questionImage": "",
+    "options": [
+      { "text": "Durchführung \"Lessons learned\"", "image": "" },
+      { "text": "Archivierung der Testmittel", "image": "" },
+      { "text": "Entwerfen der konkreten Testfälle", "image": "" },
+      { "text": "Schreiben des Testabschlussberichts", "image": "" }
+    ],
+    "correctAnswer": ["Durchführung \"Lessons learned\"", "Archivierung der Testmittel", "Entwerfen der konkreten Testfälle"]
+  },
+  {
+    "question": "What is the capital of France?",
+    "questionImage": "",
+    "options": [
+      { "text": "Berlin", "image": "" },
+      { "text": "Madrid", "image": "" },
+      { "text": "Paris", "image": "" },
+      { "text": "Lisbon", "image": "" }
+    ],
+    "correctAnswer": ["Paris"]
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "questionImage": "",
+    "options": [
+      { "text": "Earth", "image": "" },
+      { "text": "Mars", "image": "/src/assets/images/img1.jpg" },
+      { "text": "Jupiter", "image": "" },
+      { "text": "Saturn", "image": "" }
+    ],
+    "correctAnswer": ["Mars"]
+  }
+]
