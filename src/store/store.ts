@@ -28,7 +28,15 @@ export const useQuizStore = defineStore('quiz', {
             try {
                 const response = await fetch('/src/assets/questions.json');
                 const data: Question[] = await response.json();
+
+                // Fragen mischen
                 this.questions = this.shuffleArray(data);
+
+                // Antworten für jede Frage mischen
+                this.questions.forEach(question => {
+                    question.options = this.shuffleArray(question.options);
+                });
+
                 this.currentQuestionIndex = 0;
                 this.userAnswers = [];
             } catch (error) {
