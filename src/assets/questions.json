@@ -8,7 +8,7 @@
       { "text": "Entwerfen der konkreten Testfälle", "image": "" },
       { "text": "Schreiben des Testabschlussberichts", "image": "" }
     ],
-    "correctAnswer": ["Durchführung \"Lessons learned\"", "Archivierung der Testmittel", "Entwerfen der konkreten Testfälle"]
+    "correctAnswer": ["Durchführung \"Lessons learned\"", "Archivierung der Testmittel", "Schreiben des Testabschlussberichts"]
   },
   {
     "question": "Welcher der nachfolgenden Punkte ist ein Projektrisiko?",
@@ -22,14 +22,32 @@
     "correctAnswer": ["Möglichkeit von Schäden an Leib und Leben durch funktionale Softwarefehler", "Fehler in der Testumgebung", "Schlechte Softwarecharakteristiken (z. B. Perfomance)"]
   },
   {
-    "question": "Welches der folgenden Beispiele ist eine Fehlerwirkung in einem Tempomat eines Autos?",
+    "question": "Welche der nachfolgenden Verfahren gehören zu den Black-Box-Verfahren?\nMarkieren Sie die fünf korrekten Antworten!",
     "questionImage": "",
     "options": [
-      { "text": "Die System-Entwurfspezifikation gibt die Geschwindigkeit falsch an", "image": "" },
-      { "text": "Nicht benötigter Code, der beim Rückwärtsfahren einen Alarm auslöst, wurde in das System aufgenommen", "image": "" },
-      { "text": "Der Entwickler des Systems hat vergessen, Variablen nach einem, Ausschneiden und Einfügen umzubenennen", "image": "" },
-      { "text": "Das System hält die eingestellte Geschwindigkeit nicht mehr ein, wenn die Radiolautstärke erhöht oder verringert wird", "image": "" }
+      { "text": "Zustandsbasierter Test", "image": "" },
+      { "text": "Entscheidungstest", "image": "" },
+      { "text": "Entscheidungstabellentest", "image": "" },
+      { "text": "Anwendungsfallbasierter Test (=Szenariotest)", "image": "" },
+      { "text": "Äquivalenzklassenbildung", "image": "" },
+      { "text": "Grenzwerttest", "image": "" },
+      { "text": "Anweisungstest", "image": "" }
     ],
-    "correctAnswer": ["Die System-Entwurfspezifikation gibt die Geschwindigkeit falsch an", "Das System hält die eingestellte Geschwindigkeit nicht mehr ein, wenn die Radiolautstärke erhöht oder verringert wird"]
+    "correctAnswer": ["Zustandsbasierter Test",
+                      "Entscheidungstabellentest",
+                      "Anwendungsfallbasierter Test (=Szenariotest)",
+                      "Äquivalenzklassenbildung",
+                      "Grenzwerttest"]
+  },
+  {
+    "question": "Welchen Vorteil bringt eine Rückverfolgbarkeit zwischen den Anforderımgen und\ndem Testergebnis?",
+    "questionImage": "",
+    "options": [
+      { "text": "Der Überdeckungsstatus zeigt die Abhängigkeiten zwischen verschiedenen Anfordenmgen", "image": "" },
+      { "text": "Der Überdeckungsstatus kann den Teststatus für bestimmte Stakeholder wiedergeben, z. B. Anforderungen, für die Tests noch ausstehen", "image": "" },
+      { "text": "Der Überdeckungsstatus ermöglicht es dem Test auf zukünftige Auswirkungsanalysen zu verzichten", "image": "" },
+      { "text": "Der Überdeckungsstatus erlaubt eine umittelbare Automatisierung der vorhandenen, manuellen Testfälle, ", "image": "" }
+    ],
+    "correctAnswer": ["Der Überdeckungsstatus kann den Teststatus für bestimmte Stakeholder wiedergeben, z. B. Anforderungen, für die Tests noch ausstehen"]
   }
 ]

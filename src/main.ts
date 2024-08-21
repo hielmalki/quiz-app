@@ -3,11 +3,11 @@ import App from './App.vue';
 import router from './router/router';
 import { createPinia } from 'pinia';
 import './index.css';
-import { useQuizStore } from "./store/store"; // Importieren Sie die Tailwind CSS Datei
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faArrowLeft, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { useQuizStore } from "./store/store";
 
 // Font Awesome Icons zur Bibliothek hinzufügen
 library.add(faArrowLeft, faAngleLeft);

@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-lg mx-auto p-8 bg-white rounded-lg shadow-lg mt-10">
+  <div v-if="currentQuestion" class="max-w-lg mx-auto p-8 bg-white rounded-lg shadow-lg mt-10">
     <div v-if="currentQuestionIndex > 0" class="mb-10">
       <font-awesome-icon
           icon="angle-left"
@@ -66,17 +66,18 @@ export default {
     };
 
     const goBack = () => {
-      if (quizStore.currentQuestionIndex > 0) {
-        quizStore.previousQuestion();
-        router.push('/question');
-      } else {
-        router.push('/');
-      }
+      router.go(-1);
     };
 
     onMounted(() => {
       if (!currentQuestion.value) {
         quizStore.loadQuestions();
+      }
+      const userAnswer = quizStore.getUserAnswer(currentQuestion.value.question);
+      if (userAnswer) {
+        selectedAnswers.value = userAnswer.split(', ');
+      } else {
+        selectedAnswers.value = [];
       }
     });
 

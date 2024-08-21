@@ -31,9 +31,6 @@
       </div>
       <hr class="my-6">
       <p class="mt-4 text-base">
-        <span class="font-semibold">Deine Antwort:</span> {{ userAnswer.answer }}
-      </p>
-      <p class="mt-4 text-base">
         <span class="font-semibold">Richtige Antwort:</span> {{ getCorrectAnswer(userAnswer.question).join(', ') }}
       </p>
     </div>
@@ -52,7 +49,10 @@ export default {
   setup() {
     const quizStore = useQuizStore();
     const router = useRouter();
-    const userAnswer = computed(() => quizStore.userAnswer);
+    const userAnswer = computed(() => {
+      const currentQuestion = quizStore.questions[quizStore.currentQuestionIndex];
+      return quizStore.userAnswers.find(answer => answer.question === currentQuestion.question) || { question: '', answer: '' };
+    });
     const hasNextQuestion = computed(() => quizStore.hasNextQuestion());
     const visibleImages = ref<number[]>([]);
 
@@ -84,17 +84,13 @@ export default {
     };
 
     const isCorrect = (answer: { question: string; answer: string }) => {
-      const correctAnswer = getCorrectAnswer(answer.question).sort().join(', ');
-      return correctAnswer === answer.answer.split(', ').sort().join(', ');
+      const userAnswers = answer.answer.split(', ').sort().join(', ');
+      const correctAnswers = getCorrectAnswer(answer.question).sort().join(', ');
+      return userAnswers === correctAnswers;
     };
 
     const goBack = () => {
-      if (quizStore.currentQuestionIndex > 0) {
-        quizStore.previousQuestion();
-        router.push('/question');
-      } else {
-        router.push('/');
-      }
+      router.go(-1);
     };
 
     const goToNextQuestion = () => {

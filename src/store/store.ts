@@ -12,11 +12,16 @@ interface Question {
     correctAnswer: string[];
 }
 
+interface UserAnswer {
+    question: string;
+    answer: string;
+}
+
 export const useQuizStore = defineStore('quiz', {
     state: () => ({
         questions: [] as Question[],
         currentQuestionIndex: 0,
-        userAnswer: { question: '', answer: '' },
+        userAnswers: [] as UserAnswer[],
     }),
     actions: {
         async loadQuestions() {
@@ -24,12 +29,23 @@ export const useQuizStore = defineStore('quiz', {
                 const response = await fetch('/src/assets/questions.json');
                 const data: Question[] = await response.json();
                 this.questions = this.shuffleArray(data);
+                this.currentQuestionIndex = 0;
+                this.userAnswers = [];
             } catch (error) {
                 console.error('Error loading questions:', error);
             }
         },
-        setUserAnswer(answer: { question: string; answer: string }) {
-            this.userAnswer = answer;
+        setUserAnswer(answer: UserAnswer) {
+            const existingAnswerIndex = this.userAnswers.findIndex(a => a.question === answer.question);
+            if (existingAnswerIndex !== -1) {
+                this.userAnswers[existingAnswerIndex] = answer;
+            } else {
+                this.userAnswers.push(answer);
+            }
+        },
+        getUserAnswer(question: string) {
+            const answer = this.userAnswers.find(a => a.question === question);
+            return answer ? answer.answer : '';
         },
         nextQuestion() {
             if (this.currentQuestionIndex < this.questions.length - 1) {
