@@ -8,7 +8,8 @@
       { "text": "Entwerfen der konkreten Testfälle", "image": "" },
       { "text": "Schreiben des Testabschlussberichts", "image": "" }
     ],
-    "correctAnswer": ["Durchführung \"Lessons learned\"", "Archivierung der Testmittel", "Schreiben des Testabschlussberichts"]
+    "correctAnswer": ["Durchführung \"Lessons learned\"", "Archivierung der Testmittel", "Schreiben des Testabschlussberichts"],
+    "singleChoice": false
   },
   {
     "question": "Welcher der nachfolgenden Punkte ist ein Projektrisiko?",
@@ -19,7 +20,8 @@
       { "text": "Fehler in der Testumgebung", "image": "" },
       { "text": "Möglichkeit von Schäden an Leib und Leben durch funktionale Softwarefehler", "image": "" }
     ],
-    "correctAnswer": ["Möglichkeit von Schäden an Leib und Leben durch funktionale Softwarefehler", "Fehler in der Testumgebung", "Schlechte Softwarecharakteristiken (z. B. Perfomance)"]
+    "correctAnswer": ["Möglichkeit von Schäden an Leib und Leben durch funktionale Softwarefehler", "Fehler in der Testumgebung", "Schlechte Softwarecharakteristiken (z. B. Perfomance)"],
+    "singleChoice": false
   },
   {
     "question": "Welche der nachfolgenden Verfahren gehören zu den Black-Box-Verfahren?\nMarkieren Sie die fünf korrekten Antworten!",
@@ -34,10 +36,11 @@
       { "text": "Anweisungstest", "image": "" }
     ],
     "correctAnswer": ["Zustandsbasierter Test",
-                      "Entscheidungstabellentest",
-                      "Anwendungsfallbasierter Test (=Szenariotest)",
-                      "Äquivalenzklassenbildung",
-                      "Grenzwerttest"]
+      "Entscheidungstabellentest",
+      "Anwendungsfallbasierter Test (=Szenariotest)",
+      "Äquivalenzklassenbildung",
+      "Grenzwerttest"],
+    "singleChoice": false
   },
   {
     "question": "Welchen Vorteil bringt eine Rückverfolgbarkeit zwischen den Anforderımgen und\ndem Testergebnis?",
@@ -48,6 +51,7 @@
       { "text": "Der Überdeckungsstatus ermöglicht es dem Test auf zukünftige Auswirkungsanalysen zu verzichten", "image": "" },
       { "text": "Der Überdeckungsstatus erlaubt eine umittelbare Automatisierung der vorhandenen, manuellen Testfälle, ", "image": "" }
     ],
-    "correctAnswer": ["Der Überdeckungsstatus kann den Teststatus für bestimmte Stakeholder wiedergeben, z. B. Anforderungen, für die Tests noch ausstehen"]
+    "correctAnswer": ["Der Überdeckungsstatus kann den Teststatus für bestimmte Stakeholder wiedergeben, z. B. Anforderungen, für die Tests noch ausstehen"],
+    "singleChoice": true
   }
 ]

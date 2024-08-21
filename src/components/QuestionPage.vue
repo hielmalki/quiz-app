@@ -16,7 +16,13 @@
           :class="{ 'bg-green-500 text-white': selectedAnswers.includes(option.text), 'border-green-500': selectedAnswers.includes(option.text) }"
       >
         <div class="flex items-center">
-          <input type="checkbox" :value="option.text" v-model="selectedAnswers" class="hidden" />
+          <input
+              type="checkbox"
+              :value="option.text"
+              :checked="selectedAnswers.includes(option.text)"
+              @change="handleOptionChange(option.text)"
+              class="hidden"
+          />
           <span>{{ option.text }}</span>
         </div>
         <button v-if="option.image" @click.prevent="toggleImage(index)" class="text-black underline hover:text-black-700 text-sm">Show Image</button>
@@ -69,6 +75,18 @@ export default {
       router.go(-1);
     };
 
+    const handleOptionChange = (option: string) => {
+      if (isSingleChoice.value) {
+        selectedAnswers.value = [option]; // Bei Single-Choice wird nur eine Option ausgewählt
+      } else {
+        if (selectedAnswers.value.includes(option)) {
+          selectedAnswers.value = selectedAnswers.value.filter(opt => opt !== option); // Entfernt die Option, wenn sie bereits ausgewählt war
+        } else {
+          selectedAnswers.value.push(option); // Fügt die Option hinzu, wenn sie noch nicht ausgewählt war
+        }
+      }
+    };
+
     onMounted(() => {
       if (!currentQuestion.value) {
         quizStore.loadQuestions();
@@ -81,7 +99,21 @@ export default {
       }
     });
 
-    return { currentQuestion, selectedAnswers, checkAnswer, toggleImage, isImageVisible, currentQuestionIndex, goBack };
+    const isSingleChoice = computed(() => {
+      return currentQuestion.value.singleChoice || false;
+    });
+
+    return {
+      currentQuestion,
+      selectedAnswers,
+      checkAnswer,
+      toggleImage,
+      isImageVisible,
+      currentQuestionIndex,
+      goBack,
+      handleOptionChange,
+      isSingleChoice
+    };
   },
 };
 </script>
