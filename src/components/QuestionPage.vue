@@ -9,6 +9,20 @@
     </div>
     <h2 class="text-2xl font-bold mb-6 text-left">{{ currentQuestion.question }}</h2>
     <p class="text-gray-600 mb-6">Markieren Sie die richtigen Antworten</p>
+
+    <!-- Fortschrittsbalken -->
+    <div class="mb-6">
+      <div class="h-2 bg-gray-200 rounded-full">
+        <div
+            class="h-2 bg-green-500 rounded-full"
+            :style="{ width: progressBarWidth + '%' }"
+        ></div>
+      </div>
+      <div class="text-sm text-gray-500 mt-2">
+        Frage {{ currentQuestionIndex + 1 }} von {{ totalQuestions }}
+      </div>
+    </div>
+
     <img v-if="currentQuestion.questionImage" :src="currentQuestion.questionImage" alt="Question Image" class="mb-6 rounded-lg shadow-md" />
     <div v-for="(option, index) in currentQuestion.options" :key="index" class="mb-4">
       <label
@@ -52,6 +66,7 @@ export default {
     const currentQuestion = computed(() => quizStore.questions[quizStore.currentQuestionIndex]);
     const selectedAnswers = ref<string[]>([]);
     const currentQuestionIndex = computed(() => quizStore.currentQuestionIndex);
+    const totalQuestions = computed(() => quizStore.questions.length);
     const visibleImages = ref<number[]>([]);
 
     const toggleImage = (index: number) => {
@@ -103,6 +118,10 @@ export default {
       return currentQuestion.value.singleChoice || false;
     });
 
+    const progressBarWidth = computed(() => {
+      return ((currentQuestionIndex.value + 1) / totalQuestions.value) * 100;
+    });
+
     return {
       currentQuestion,
       selectedAnswers,
@@ -112,7 +131,9 @@ export default {
       currentQuestionIndex,
       goBack,
       handleOptionChange,
-      isSingleChoice
+      isSingleChoice,
+      progressBarWidth,
+      totalQuestions
     };
   },
 };
