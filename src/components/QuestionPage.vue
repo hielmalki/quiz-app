@@ -28,6 +28,7 @@
       <label
           class="flex items-center justify-between p-4 border rounded-lg cursor-pointer transition transform hover:scale-105"
           :class="{ 'bg-green-500 text-white': selectedAnswers.includes(option.text), 'border-green-500': selectedAnswers.includes(option.text) }"
+
       >
         <div class="flex items-center">
           <input

@@ -1,30 +1,18 @@
 [
   {
-    "question": "Welche der Antworten sind Aufgaben des Prozessschritts \"Abschluss\" im Fundamentalen Testprozess nach ISTQB?",
+    "question": "Welche der Antworten sind Aufgaben des Prozessschritts 'Abschluss' im Fundamentalen Testprozess nach ISTQB?",
     "questionImage": "",
     "options": [
-      { "text": "Durchführung \"Lessons learned\"", "image": "" },
       { "text": "Archivierung der Testmittel", "image": "" },
-      { "text": "Entwerfen der konkreten Testfälle", "image": "" },
-      { "text": "Schreiben des Testabschlussberichts", "image": "" }
+      { "text": "Durchführung 'Lessons learned'", "image": "" },
+      { "text": "Schreiben des Testabschlussberichts", "image": "" },
+      { "text": "Entwerfen der konkreten Testfälle", "image": "" }
     ],
-    "correctAnswer": ["Durchführung \"Lessons learned\"", "Archivierung der Testmittel", "Schreiben des Testabschlussberichts"],
+    "correctAnswer": ["Archivierung der Testmittel", "Durchführung 'Lessons learned'", "Schreiben des Testabschlussberichts"],
     "singleChoice": false
   },
   {
-    "question": "Welcher der nachfolgenden Punkte ist ein Projektrisiko?",
-    "questionImage": "",
-    "options": [
-      { "text": "Mangelhafte Benutzbarkeit der Anwendung über die GUI", "image": "" },
-      { "text": "Schlechte Softwarecharakteristiken (z. B. Perfomance)", "image": "" },
-      { "text": "Fehler in der Testumgebung", "image": "" },
-      { "text": "Möglichkeit von Schäden an Leib und Leben durch funktionale Softwarefehler", "image": "" }
-    ],
-    "correctAnswer": ["Möglichkeit von Schäden an Leib und Leben durch funktionale Softwarefehler", "Fehler in der Testumgebung", "Schlechte Softwarecharakteristiken (z. B. Perfomance)"],
-    "singleChoice": false
-  },
-  {
-    "question": "Welche der nachfolgenden Verfahren gehören zu den Black-Box-Verfahren?\nMarkieren Sie die fünf korrekten Antworten!",
+    "question": "Welche der nachfolgenden Verfahren gehören zu den Black-Box-Verfahren?",
     "questionImage": "",
     "options": [
       { "text": "Zustandsbasierter Test", "image": "" },
@@ -35,23 +23,223 @@
       { "text": "Grenzwerttest", "image": "" },
       { "text": "Anweisungstest", "image": "" }
     ],
-    "correctAnswer": ["Zustandsbasierter Test",
-      "Entscheidungstabellentest",
-      "Anwendungsfallbasierter Test (=Szenariotest)",
-      "Äquivalenzklassenbildung",
-      "Grenzwerttest"],
+    "correctAnswer": ["Zustandsbasierter Test", "Entscheidungstabellentest", "Anwendungsfallbasierter Test (=Szenariotest)", "Äquivalenzklassenbildung", "Grenzwerttest"],
     "singleChoice": false
   },
   {
-    "question": "Welchen Vorteil bringt eine Rückverfolgbarkeit zwischen den Anforderımgen und\ndem Testergebnis?",
+    "question": "Welchen Vorteil bringt eine Rückverfolgbarkeit zwischen den Anforderımgen und dem Testergebnis?",
     "questionImage": "",
     "options": [
       { "text": "Der Überdeckungsstatus zeigt die Abhängigkeiten zwischen verschiedenen Anfordenmgen", "image": "" },
       { "text": "Der Überdeckungsstatus kann den Teststatus für bestimmte Stakeholder wiedergeben, z. B. Anforderungen, für die Tests noch ausstehen", "image": "" },
       { "text": "Der Überdeckungsstatus ermöglicht es dem Test auf zukünftige Auswirkungsanalysen zu verzichten", "image": "" },
-      { "text": "Der Überdeckungsstatus erlaubt eine umittelbare Automatisierung der vorhandenen, manuellen Testfälle, ", "image": "" }
+      { "text": "Der Überdeckungsstatus erlaubt eine umittelbare Automatisierung der vorhandenen, manuellen Testfälle", "image": "" }
     ],
     "correctAnswer": ["Der Überdeckungsstatus kann den Teststatus für bestimmte Stakeholder wiedergeben, z. B. Anforderungen, für die Tests noch ausstehen"],
+    "singleChoice": true
+  },
+  {
+    "question": "Was ist bei der Auswahl eines Werkzeugs von besonderer Bedeutung?",
+    "questionImage": "",
+    "options": [
+      { "text": "Evaluierung des Werkzeugs gegen klare Anforderungen", "image": "" },
+      { "text": "Anschaffungskosten des Werkzeugs", "image": "" },
+      { "text": "Marktpräsenz des Werkzeugherstellers und dessen zukünftigen Prognosen", "image": "" },
+      { "text": "Eindruck des Werkzeugs durch eine Präsentation des Werkzeugherstellers", "image": "" }
+    ],
+    "correctAnswer": ["Evaluierung des Werkzeugs gegen klare Anforderungen"],
+    "singleChoice": true
+  },
+  {
+    "question": "Welcher der nachfolgenden Punkte ist ein Projektrisiko?",
+    "questionImage": "",
+    "options": [
+      { "text": "Mangelhafte Benutzbarkeit der Anwendung über die GUI", "image": "" },
+      { "text": "Schlechte Softwarecharakteristiken (z. B. Perfomance)", "image": "" },
+      { "text": "Fehler in der Testumgebung", "image": "" },
+      { "text": "Möglichkeit von Schäden an Leib und Leben durch funktionale Softwarefehler", "image": "" }
+    ],
+    "correctAnswer": ["Mangelhafte Benutzbarkeit der Anwendung über die GUI"],
+    "singleChoice": true
+  },
+  {
+    "question": "Folgende Wertebereiche sind gegeben. Bestimmen Sıe dıe Werte für dıe Grenzwertanalyse!",
+    "questionImage": "",
+    "options": [
+      { "text": "0; 1; 100; 101", "image": "" },
+      { "text": "-1; 0; 99; 100", "image": "" },
+      { "text": "0; 1; 99; 100", "image": "" },
+      { "text": "-1; 0; 100; 101", "image": "" }
+    ],
+    "correctAnswer": ["-1; 0; 99; 100"],
+    "singleChoice": true
+  },
+  {
+    "question": "Auf welche Aktivität des Testprozesses bezieht sich diese Beschreibung?",
+    "questionImage": "",
+    "options": [
+      { "text": "Testentwurf", "image": "" },
+      { "text": "Testrealisierung", "image": "" },
+      { "text": "Testanalyse", "image": "" },
+      { "text": "Testplanung", "image": "" }
+    ],
+    "correctAnswer": ["Testanalyse"],
+    "singleChoice": true
+  },
+  {
+    "question": "Welche der Antwort Optionen mit Zustandsübergangs-Sequenzen erreicht die höchste Überdeckung der Zustandsübergänge?",
+    "questionImage": "",
+    "options": [
+      { "text": "Aus -› Warten -› Aus -› Warten -› Erhaltungsladen -› Laden -› Hoch -›", "image": "" },
+      { "text": "Laden ->Niedrig ->Warten -> Erhaltungsladen -> Laden -> Hoch -> Laden -> Erhaltungsladen -> Warten -> Aus -> Warten", "image": "" },
+      { "text": "Warten -> Erhaitungsiaden -> Warten -> Aus -> Warten ->Erhaltungsladen -> Laden -> Niedrig -> Laden", "image": "" },
+      { "text": "Hoch -> Laden -> Niedrig -> Laden -> Erhaltungsladen -> Warten ->Erhaltungsladen -> Warten ->Erhaltungsladen", "image": "" }
+    ],
+    "correctAnswer": ["Laden ->Niedrig ->Warten -> Erhaltungsladen -> Laden -> Hoch -> Laden -> Erhaltungsladen -> Warten -> Aus -> Warten"],
+    "singleChoice": true
+  },
+  {
+    "question": "Wie viele Tesfälle werden mindestens benötigt, um den nachfolgenden Kontrollﬂussgraphen mit 100% Entscheidungsüberdeckung zu testen?",
+    "questionImage": "",
+    "options": [
+      { "text": "1", "image": "" },
+      { "text": "2", "image": "" },
+      { "text": "3", "image": "" },
+      { "text": "4", "image": "" }
+    ],
+    "correctAnswer": ["2"],
+    "singleChoice": true
+  },
+  {
+    "question": "Welches ist die korrekte Paarung von Testaktivitäten und Testaufgaben?",
+    "questionImage": "",
+    "options": [
+      { "text": "A-3, B-2, C-1, D-4", "image": "" },
+      { "text": "A-2, B-3, C-4, D-1", "image": "" },
+      { "text": "A-3, B-2, C-4, D-1", "image": "" },
+      { "text": "A-2, B-1, C-3, D-4", "image": "" }
+    ],
+    "correctAnswer": ["A-3, B-2, C-4, D-1"],
+    "singleChoice": true
+  },
+  {
+    "question": "Wie hoch ist die prozentuale Grenzwertüberdeckung der GÜLTIGEN Äquivalenzklasse durch diese Testdaten UND welche Testdaten sollten zusätzlich für 100% Grenzwertüberdeckung über ALLE Äquivalenzklassen (ohne Berücksichtigung von negativen Werten und Werten größer 130) noch getestet werden?",
+    "questionImage": "",
+    "options": [
+      { "text": "66.7% UND die Werte 0 und 67", "image": "" },
+      { "text": "75% UND die Werte 1 und 100", "image": "" },
+      { "text": "50% UND die Werte 1 und 100", "image": "" },
+      { "text": "50% UND die Werte 0 und 67", "image": "" }
+    ],
+    "correctAnswer": ["75% UND die Werte 1 und 100"],
+    "singleChoice": true
+  },
+  {
+    "question": "Wie viele zusätzliche Testfälle müssen Sie als Tester in Ihrer Entscheidungstabelle mindestens hinzufügen?",
+    "questionImage": "",
+    "options": [
+      { "text": "8", "image": "" },
+      { "text": "5", "image": "" },
+      { "text": "1", "image": "" },
+      { "text": "3", "image": "" }
+    ],
+    "correctAnswer": ["8"],
+    "singleChoice": true
+  },
+  {
+    "question": "Welche Herausforderung soll die Analyse der Auswirkungen dieser Modifikation AM EHESTEN angehen?",
+    "questionImage": "",
+    "options": [
+      { "text": "Sie sollten den neusten Prozessor einbauen, um dem Kunden bei Änderungen dieserart technologisch immer einen Schritt voraus zu sein", "image": "" },
+      { "text": "Man muss prüfen, ob das verwendete Konfigurationsmanagementwerzeuk weiterhin korrekt arbeitet", "image": "" },
+      { "text": "Sie müssen die entsprechenden Tests und Testsuiten entsprechend anpassen, um die Umsetzung dieser Änderung vollständig überprüfen zu können", "image": "" },
+      { "text": "Das Projektteam sollte die Änderung unmittelbar implementieren und in Produktion einspielen", "image": "" }
+    ],
+    "correctAnswer": ["Sie müssen die entsprechenden Tests und Testsuiten entsprechend anpassen, um die Umsetzung dieser Änderung vollständig überprüfen zu können"],
+    "singleChoice": true
+  },
+  {
+    "question": "Welches der folgenden Beispiele ist eine Fehlerwirkung in einem Tempomat eines Autos?",
+    "questionImage": "",
+    "options": [
+      { "text": "Die System-Entwurfspezifikation gibt die Geschwindigkeit falsch an", "image": "" },
+      { "text": "Nicht benötigter Code, der beim Rückwärtsfahren einen Alarm auslöst, wurde in das System aufgenommen", "image": "" },
+      { "text": "Der Entwickler des Systems hat vergessen, Variablen nach einem, Ausschneiden und Einfügen umzubenennen", "image": "" },
+      { "text": "Das System hält die eingestellte Geschwindigkeit nicht mehr ein, wenn die Radiolautstärke erhöht oder verringert wird", "image": "" }
+    ],
+    "correctAnswer": ["Das System hält die eingestellte Geschwindigkeit nicht mehr ein, wenn die Radiolautstärke erhöht oder verringert wird"],
+    "singleChoice": true
+  },
+  {
+    "question": "Zu einer guten Fehlermeldung gehören mindestens:",
+    "questionImage": "",
+    "options": [
+      { "text": "Vorbedingung, Beschreibung der Fehlerwirkung, Version des Testobjekts, Eigentümer, Name des vermuteten Fehlerverursachers", "image": "" },
+      { "text": "Fehlerschwere, Beschreibung der Fehlerwirkung, Testumgebung, Version des Testobjekts. Fehleraufdeckender Testfall, Name des Testers", "image": "" },
+      { "text": "Vorbedingungen, Beschreibung des Fehlerzustands, Lebenszyklus-Phase der Fehlerbeobachtung, Änderungshistorie, Datum und Uhrzeit", "image": "" },
+      { "text": "Beschreibung der Fehlerwirkung, Testumgebung, Version des Testobjekts, Installationsdatum, Datum und Uhrzeit", "image": "" }
+    ],
+    "correctAnswer": ["Fehlerschwere, Beschreibung der Fehlerwirkung, Testumgebung, Version des Testobjekts. Fehleraufdeckender Testfall, Name des Testers"],
+    "singleChoice": true
+  },
+  {
+    "question": "Welche drei Beobachtungen sind KEINE Fehlerwirkungen?",
+    "questionImage": "",
+    "options": [
+      { "text": "Eine kompilierte Quellcodedatei wurde in der falschen Version zum System hinzugefügt", "image": "" },
+      { "text": "Der Berechnungsalgorithmus verwendet die falschen Eingangsvariablen", "image": "" },
+      { "text": "Das Produkt stürzt ab, als der Benutzer eine Option in einer Dialogbox auswählte", "image": "" },
+      { "text": "Der Entwickler hat die Anforderungen an den Algorithmus falsch interpretiert", "image": "" }
+    ],
+    "correctAnswer": ["Eine kompilierte Quellcodedatei wurde in der falschen Version zum System hinzugefügt", "Der Entwickler hat die Anforderungen an den Algorithmus falsch interpretiert", "Der Berechnungsalgorithmus verwendet die falschen Eingangsvariablen"],
+    "singleChoice": false
+  },
+  {
+    "question": "Welche der folgenden Aktivitäten gehört zur Testplanung?",
+    "questionImage": "",
+    "options": [
+      { "text": "Vorbereitung von Testdaten und Sicherstellung des Ladens dieser in die Testumgebung(en)", "image": "" },
+      { "text": "Definieren von Eingangs- und Endekriterien für jede Teststufe und jede Testart", "image": "" },
+      { "text": "Aufzeichnung der Ergebnisse der Testdurchführung (manuell + automatisiert)", "image": "" },
+      { "text": "Definition und Priorisierung der Testbedingungen, die zu testen sind", "image": "" }
+    ],
+    "correctAnswer": ["Definieren von Eingangs- und Endekriterien für jede Teststufe und jede Testart"],
+    "singleChoice": true
+  },
+  {
+    "question": "Welche der folgenden Aussagen beschreibt am besten einen der sieben Grundsätze des Software-Testens?",
+    "questionImage": "",
+    "options": [
+      { "text": "Automatisierte Tests sind besser als manuelle Tests zum Vermeiden von 'vollständigem Testen' geeignet", "image": "" },
+      { "text": "Vollständiges Testen ist, mit genügend Anstrengung und Werkzeugunterstützung, für alle Arten von Software praktikabel", "image": "" },
+      { "text": "Es ist nomıalerweise unmöglich, alle Eingabe-/Ausgabe-Kombinationen für ein Software-System zu testen", "image": "" },
+      { "text": "Zweck des Testens ist es, die Abwesenheit von Fehlern nachzuweisen", "image": "" }
+    ],
+    "correctAnswer": ["Es ist nomıalerweise unmöglich, alle Eingabe-/Ausgabe-Kombinationen für ein Software-System zu testen"],
+    "singleChoice": true
+  },
+  {
+    "question": "Welche der folgenden Zuordnungen von Beschreibungen zu verschiedenen Kategorien von Testverfahren trifft AM BESTEN zu?",
+    "questionImage": "",
+    "options": [
+      { "text": "Black - 3; White - 1, 2; Erfahrung - 4, 5", "image": "" },
+      { "text": "Black - 4, 5; White - 1, 2; Erfahrung - 3", "image": "" },
+      { "text": "Black - 4; White - 1, 2; Erfahrung - 3, 5", "image": "" },
+      { "text": "Black - 1, 3. 5; White - 2; Erfahrung - 4", "image": "" }
+    ],
+    "correctAnswer": ["Black - 4, 5; White - 1, 2; Erfahrung - 3"],
+    "singleChoice": true
+  },
+  {
+    "question": "In welcher Liste wurden alle ungültigen Zustandsübergänge des Zustandsautomaten berücksichtigt?",
+    "questionImage": "",
+    "options": [
+      { "text": "A-Z1, Z1-ZZ, Z1-Z3, Z3-ZZ, Z1-Z1, Z1-E", "image": "" },
+      { "text": "Z1-Z2, A-A, A-Z2, A-Z3, A-E, E'A, E-Z1, E-Z2, E-Z3, E-E, Z1-A, Zl-Zl, Z1-Z3, Z3-A, Z3-Z1, Z3-Z3, Z3-E, Z2-A, Z2-Z2", "image": "" },
+      { "text": "A-A, A-Z2, A-Z3. A-E, E-A, E-Z1, E-Z2, E-Z3. E-E, Z1-A, Z1-Z2, Z1-Z3, Z3-Z1. Z3-Z3. Z3-E, Z2-E. Z2-Z2", "image": "" },
+      { "text": "A-A, A-Z2, A-Z3, A-E, E-A, Z3-A. Z3-Z1, Z3-Z3, Z3-E› Z2-A, Z2-Z2", "image": "" }
+    ],
+    "correctAnswer": ["A-A, A-Z2, A-Z3, A-E, E-A, E-Z1, E-Z2, E-Z3, E-E, Z1-A, Z1-Z2, Z1-Z3, Z3-Z1. Z3-Z3. Z3-E, Z2-E. Z2-Z2"],
     "singleChoice": true
   }
 ]
