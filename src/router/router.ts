@@ -5,13 +5,19 @@ import QuestionPage from '../components/QuestionPage.vue';
 import ResultPage from '../components/ResultPage.vue';
 import keycloak from '../keycloak';
 
+
 const requireAuth = (to, from, next) => {
-    if (keycloak.authenticated) {
-        next();
+    if (false) {
+        if (keycloak.authenticated) {
+            next();
+        } else {
+            keycloak.login();
+        }
     } else {
-        keycloak.login();
+        next(); // Authentifizierung überspringen
     }
 };
+
 
 const routes = [
     { path: '/', component: StartPage, beforeEnter: requireAuth },
